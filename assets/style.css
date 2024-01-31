@@ -1,9 +1,9 @@
 /* Base Styles */
 :root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
+  --main-primary: #aa4008;
+  --main-background: #F4F4F4;
+  --main-accent:  #333333;
+  --main-blue:  #3498DB ;
 }
 
 * {
@@ -34,7 +34,8 @@ body {
     font-size: 2rem; 
     font-weight: 400;
     line-height: 1.6;
-    color: var(--main-gray);
+    background-color: var(--main-background);
+    color: var(--main-accent);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -54,7 +55,7 @@ body {
     align-items: center;
     padding: 1rem;
     margin: auto;
-    background-color: var(--main-red);
+    background-color: var(--main-primary);
     position: sticky;
     top: 0;
     left:0;
@@ -69,6 +70,12 @@ body {
     padding: 0.5rem 1rem;
   }
   
+  /* Add an active class styling */
+.nav-link.active {
+  color: var(--main-blue); 
+  font-weight: bold; 
+}
+
   nav ul {
     display: flex;
     justify-content: space-between;
@@ -83,17 +90,18 @@ body {
   }
   
   nav ul li a {
-    color: var(--main-blue);
+    color: var(--main-background);
     text-decoration: none;
     transition: color 0.3s;
   }
   
   nav ul li a:hover {
-    color: var(--main-blue);
+    color: var(--main-background);
   }
   
 .hero {
-  background-color: var(--main-white);
+  background-color: var(--main-background);
+  color: var(--main-accent);
   padding: 8rem 0;
 }
 
@@ -102,14 +110,17 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: flex-start;
 }
 
-.headings {
-  margin-bottom: 2rem;
+.intro .row {
+  display: flex;
+  align-items: center;
 }
 
-.profile-picture {
-  margin-bottom: 3rem;
+.intro .col-md-6,
+.intro .col-md-6 {
+  flex: 1;
 }
 
 .intro-buttons {
@@ -123,15 +134,22 @@ body {
   }
   
   .intro .profile-picture {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
   
   .intro .profile-picture img {
     border-radius: 50%;
-    width: 100%;
+    width: 80%;
     height: auto;
   }
+
+  .intro-text {
+    padding: 2rem 4rem; /* Adjust padding as needed */
+    color: var(--main-background);
+    background-color: var(--main-accent); /* Set background color */
+    border-radius: 10px; /* Add border-radius for a rounded box effect */
+}
  
   /* Portfolio Styles */
   #portfolio {
@@ -139,6 +157,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
     padding: 6rem 0;
+    padding-top: 80px;
   }
   .card {
     transition: transform 0.3s;
@@ -183,6 +202,7 @@ body {
   /* Skills section */
   #skills {
     padding: 6rem 0;
+    padding-top:80px;
   }
 #skills .card {
     border: none;
@@ -198,16 +218,16 @@ body {
 }
 
 #skills .fas {
-    color: #3498db;
+    color: var(--main-blue);
 }
 
 #skills .fas.fa-calculator {
-    color: #9b59b6;
+    color: var(--main-blue);
 }
 
 #skills .card-title {
     font-size: 18px;
-    color: var(--main-blue);
+    color: var(--main-accent);
 }
   
   /* Contact Styles */
@@ -222,8 +242,8 @@ body {
 
   footer {
     padding: 2rem 0;
-    background-color: var(--main-gray);
-    color: white;
+    background-color: var(--main-accent);
+    color: var(--main-background);
     text-align: center;
   }
 
@@ -237,7 +257,7 @@ body {
   }
   
   footer a {
-    color: white;
+    color: var(--main-primary);
     text-decoration: none;
     transition: color 0.3s;
   }
