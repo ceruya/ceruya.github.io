@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-  --main-primary: #aa4008;
+  --main-primary: #da7127;
   --main-background: #F4F4F4;
   --main-accent:  #333333;
   --main-blue:  #3498DB ;
@@ -111,6 +111,8 @@ body {
   align-items: center;
   text-align: center;
   justify-content: flex-start;
+  margin-right: 6rem;
+  margin-left: 6rem;
 }
 
 .intro .row {
@@ -145,11 +147,12 @@ body {
   }
 
   .intro-text {
-    padding: 2rem 4rem; /* Adjust padding as needed */
-    color: var(--main-background);
-    background-color: var(--main-accent); /* Set background color */
+    padding: 4rem 4rem; /* Adjust padding as needed */
+    color: var(--main-accent);
+    background-color: var(--main-background); /* Set background color */
     border-radius: 10px; /* Add border-radius for a rounded box effect */
-}
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
  
   /* Portfolio Styles */
   #portfolio {
@@ -241,14 +244,15 @@ body {
   /* Footer Styles */
 
   footer {
-    padding: 2rem 0;
+    padding: 1rem 1rem;
     background-color: var(--main-accent);
     color: var(--main-background);
     text-align: center;
+    margin-top: auto;
   }
 
   .social-icon {
-    margin-right: 1rem; /* adjust this value to increase or decrease the space between icons */
+    margin: 0 1rem;
     transition: transform 0.3s;
   }
   
@@ -256,6 +260,11 @@ body {
     transform: scale(1.2);
   }
   
+  footer p {
+    margin-top: 20px;
+    margin-bottom: 0;
+} 
+
   footer a {
     color: var(--main-primary);
     text-decoration: none;
