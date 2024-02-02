@@ -204,32 +204,36 @@ body {
   
   /* Skills section */
   #skills {
-    padding: 6rem 0;
-    padding-top:80px;
+    max-width: 65rem;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
+
 #skills .card {
-    border: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px;
 }
 
 #skills .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#skills .fas {
-    color: var(--main-blue);
-}
-
-#skills .fas.fa-calculator {
-    color: var(--main-blue);
+  display: flex;
+  text-align: center;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: 100%;
 }
 
 #skills .card-title {
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
     color: var(--main-accent);
 }
   
